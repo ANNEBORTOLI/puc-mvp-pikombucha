@@ -1,1 +1,4 @@
-/* Aqui vai o CSS geral da MAIN */
+.wrapper {
+  max-width: 75rem; /*1200px*/
+  margin: 2.5rem auto;
+}
