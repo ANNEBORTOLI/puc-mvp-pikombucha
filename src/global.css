@@ -1,0 +1,32 @@
+:root {
+  --white: #fff;
+  --beige: #fdf8ee;
+  --grey-100: #cacaca;
+  --grey-200: #d9d9d9;
+  --green: #96ab10;
+  --purple: #3d1152;
+  --black: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+button {
+  background-color: var(--white);
+  color: var(--black);
+  -webkit-font-smoothing: antialiased;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1rem; /*16px*/
+}
+
+/* Quando a tela for menor que 768px */
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%;
+  }
+}
