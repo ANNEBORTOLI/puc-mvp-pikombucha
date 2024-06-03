@@ -1,6 +1,7 @@
 import { Header } from "./components/Header";
 import { SliderCarousel } from "./components/SliderCarousel";
 import { Product } from "./components/Product";
+import { Footer } from "./components/Footer";
 
 import styles from "./App.module.css";
 import "./global.css";
@@ -13,7 +14,16 @@ export function App() {
       <Header />
       <div className={styles.wrapper}>
         <SliderCarousel />
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+        <Product />
       </div>
+      <Footer />
     </>
   );
 }
