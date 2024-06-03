@@ -1,0 +1,23 @@
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  box-shadow: 0.375rem 0 1.5rem rgba(0, 0, 0, 0.15);
+}
+
+.cardWrapper img {
+  width: 12.5rem;
+  border-radius: 0.5rem;
+}
+
+.cardTitle {
+  font-size: 1.125rem;
+}
+
+.botton {
+  display: flex;
+  justify-content: space-between;
+}

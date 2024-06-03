@@ -6,6 +6,8 @@
   --green: #96ab10;
   --purple: #3d1152;
   --black: #000000;
+
+  font-size: 62.5%; /* 1rem = 10px */
 }
 
 * {
@@ -14,19 +16,17 @@
   box-sizing: border-box;
 }
 
-body,
-button {
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem; /*16px*/
+  font-weight: 300;
   background-color: var(--white);
   color: var(--black);
   -webkit-font-smoothing: antialiased;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 1rem; /*16px*/
-}
-
-/* Quando a tela for menor que 768px */
-@media (max-width: 768px) {
-  html {
-    font-size: 87.5%;
-  }
 }
