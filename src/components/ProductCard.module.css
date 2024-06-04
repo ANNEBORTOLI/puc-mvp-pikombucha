@@ -41,4 +41,11 @@
   cursor: pointer;
   transition: background-color 0.1s;
   text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btnAdd:hover {
+  background-color: var(--green);
+  transition: color 0.1s;
 }

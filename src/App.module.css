@@ -23,7 +23,7 @@ h2 {
 }
 
 .infoCardContainer {
-  width: 100%;
+  width: 90%;
   height: 50rem;
   display: flex;
   justify-content: space-between;
@@ -74,4 +74,16 @@ h2 {
   text-decoration: underline;
   cursor: pointer;
   transition: color 0.1s;
+}
+
+@media (max-width: 1200px) {
+  .infoCardContainer {
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 3rem;
+  }
+
+  .infoCardContainer img {
+    display: none;
+  }
 }

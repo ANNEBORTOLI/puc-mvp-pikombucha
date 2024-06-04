@@ -1,17 +1,17 @@
-import { Header } from "./components/Header";
-import { SliderCarousel } from "./components/SliderCarousel";
+import { Header } from "../components/Header";
+import { SliderCarousel } from "../components/SliderCarousel";
 import { ProductCard } from "./components/ProductCard";
-import { Footer } from "./components/Footer";
+import { Footer } from "../components/Footer";
 
-import styles from "./App.module.css";
-import "./global.css";
+import styles from "../App.module.css";
+import "../global.css";
 
-import products from "./products.json";
+import products from "../products.json";
 
-import Garrafas from "./assets/garrafas.png";
-import Socios from "./assets/socios.png";
+import Garrafas from "../assets/garrafas.png";
+import Socios from "../assets/socios.png";
 
-export function App() {
+export function Home() {
   const productList = products.products;
 
   return (

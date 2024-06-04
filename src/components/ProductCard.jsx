@@ -1,20 +1,19 @@
 import styles from "./ProductCard.module.css";
-import productItem from "../assets/prod-pitanga.png";
 import { ShoppingCart } from "@phosphor-icons/react";
 
-export function ProductCard() {
+export function ProductCard({ item }) {
   return (
     <div className={styles.cardWrapper}>
-      <img src={productItem} alt="" />
+      <img src={item.image} alt="" />
       <div className={styles.cardTitle}>
-        <p>Kombucha Pitanga 350ml</p>
+        <p>{item.title}</p>
       </div>
 
       <div className={styles.cardBotton}>
-        <span className={styles.price}>R$18,OO</span>
-        <button className={styles.btnAdd} href="#">
+        <span className={styles.price}>R$ {item.price}</span>
+        <a className={styles.btnAdd} href="#">
           ADICIONAR <ShoppingCart size={18} />
-        </button>
+        </a>
       </div>
     </div>
   );
