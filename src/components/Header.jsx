@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 import { ShoppingCart } from "@phosphor-icons/react";
 import piKombuchaLogo from "../assets/logo.png";
@@ -7,20 +8,20 @@ export function Header() {
     <>
       <header className={styles.headerContainer}>
         <p className={styles.miniHeader}>
-          TOME KOMBUCHA E BEBA SAÚDE,<a href="#">SAIBA MAIS.</a>
+          TOME KOMBUCHA E BEBA SAÚDE,<Link to={"/about"}>SAIBA MAIS.</Link>
         </p>
 
         <div className={styles.bigHeader}>
-          <a href="#">
+          <Link to={"/"}>
             <img src={piKombuchaLogo} alt="Logotipo Pi Kombucha Tropical" />
-          </a>
+          </Link>
 
           <nav>
-            <a href="#">COMO COMPRAR</a>
-            <a href="#">CONTATO</a>
-            <a href="#">
+            <Link to={"/about"}>COMO COMPRAR</Link>
+            <Link to={"/about"}>CONTATO</Link>
+            <Link to={"/cart"}>
               <ShoppingCart size={32} />
-            </a>
+            </Link>
           </nav>
         </div>
       </header>

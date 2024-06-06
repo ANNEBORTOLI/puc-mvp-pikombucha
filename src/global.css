@@ -30,3 +30,7 @@ body {
   color: var(--black);
   -webkit-font-smoothing: antialiased;
 }
+
+a {
+  color: var(--purple);
+}

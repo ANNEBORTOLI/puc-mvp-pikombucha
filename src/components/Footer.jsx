@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { InstagramLogo, FacebookLogo } from "@phosphor-icons/react";
 import piKombuchaLogo from "../assets/logo.png";
 
@@ -10,28 +11,28 @@ export function Footer() {
         <div className={styles.wrapper}>
           <ul>
             <li>
-              <a href="#">SOBRE</a>
+              <Link to={"/about"}>SOBRE</Link>
             </li>
             <li>
-              <a href="#">LOJA</a>
+              <Link to={"/about"}>LOJA</Link>
             </li>
             <li>
-              <a href="#">COMPRAR</a>
+              <Link to={"/about"}>COMPRAR</Link>
             </li>
             <li>
-              <a href="#">CONTATO</a>
+              <Link to={"/about"}>CONTATO</Link>
             </li>
           </ul>
 
           <div className={styles.logos}>
-            <img src={piKombuchaLogo} alt="" />
+            <img src={piKombuchaLogo} alt="Logo" />
             <div className={styles.socialLinks}>
-              <a href="#">
+              <Link to={"https://www.facebook.com/pitropical/"}>
                 <FacebookLogo size={32} />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to={"https://www.instagram.com/pikombuchatropical/"}>
                 <InstagramLogo size={32} />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
