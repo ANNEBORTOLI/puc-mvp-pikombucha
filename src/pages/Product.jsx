@@ -1,6 +1,6 @@
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
-
+import { useShoppingList } from "../contexts/ShoppingListContext";
 import { useLocation } from "react-router-dom";
 
 import styles from "./Product.module.css";
@@ -8,6 +8,7 @@ import styles from "./Product.module.css";
 export function Product() {
   const location = useLocation();
   const { item } = location.state;
+  const { handleAddItemToShoppingList } = useShoppingList();
 
   return (
     <>
@@ -24,7 +25,9 @@ export function Product() {
             <p>{item.description}</p>
           </div>
 
-          <button>Adicionar ao Carrinho</button>
+          <button onClick={() => handleAddItemToShoppingList(item)}>
+            Adicionar ao Carrinho
+          </button>
         </div>
       </section>
       <Footer />

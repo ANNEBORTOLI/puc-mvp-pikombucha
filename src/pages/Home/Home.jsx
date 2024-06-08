@@ -1,10 +1,9 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-
 import { Header } from "../../components/Header";
 import { SliderCarousel } from "./SliderCarousel";
 import { ProductCard } from "./ProductCard";
 import { Footer } from "../../components/Footer";
+import { useShoppingList } from "../../contexts/ShoppingListContext";
 
 import styles from "./Home.module.css";
 import "../../global.css";
@@ -17,29 +16,27 @@ import products from "../../products.json";
 export function Home() {
   const productsList = products.products;
 
-  const [shoppingList, setShoppingList] = useState([]);
-
-  // function handleAddToShoppingList() {
-  //   // RETORNAR UMA LISTA DE OBJETOS COM A KEY QUANTIDADE
-  // }
-
-  // function handleDeleteItemFromShoppingList() {
-  //   // RETORNAR UMA LISTA DE OBJETOS COM A KEY QUANTIDADE
-  // }
-
-  // Componente Header recebe Shopping List
+  const { shoppingList, handleAddItemToShoppingList } = useShoppingList();
 
   return (
     <>
-      <Header />
+      <Header shoppingList={shoppingList} />
       <main className={styles.wrapper}>
         <SliderCarousel />
         <h2>Nossos Produtos</h2>
+        {/* PRODUCT CARTS */}
         <div className={styles.productsContainer}>
           {productsList.map((item, i) => {
-            return <ProductCard key={i} item={item} />;
+            return (
+              <ProductCard
+                key={i}
+                item={item}
+                onAddItem={handleAddItemToShoppingList}
+              />
+            );
           })}
         </div>
+        {/* INFO CARDS */}
         <div className={styles.infoCardContainer}>
           <img src={Garrafas} alt="Imagem das garrafas de Kombucha" />
           <div className={styles.infoCardTexts}>

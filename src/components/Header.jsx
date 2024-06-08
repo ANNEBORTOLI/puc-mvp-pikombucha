@@ -1,9 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styles from "./Header.module.css";
 import { ShoppingCart } from "@phosphor-icons/react";
 import piKombuchaLogo from "../assets/logo.png";
 
 export function Header() {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
   return (
     <>
       <header className={styles.headerContainer}>
@@ -17,6 +20,7 @@ export function Header() {
           </Link>
 
           <nav>
+            {!isHome && <Link to={"/"}>HOME</Link>}
             <Link to={"/about"}>COMO COMPRAR</Link>
             <Link to={"/about"}>CONTATO</Link>
             <Link to={"/cart"}>
