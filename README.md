@@ -21,6 +21,10 @@ Pikombucha utilizes frontend technologies such as React for building UI componen
 
 Lets drink kumbucha! 📋✅
 
+### Figma Link
+
+`https://www.figma.com/design/d2DjHTy8QMZ8S0a0nJY2mW/PI-Kombucha?node-id=9-718&t=h8FOdYphzjNtPOhj-1`
+
 ### 🛠️Technologies
 
 <ul>
